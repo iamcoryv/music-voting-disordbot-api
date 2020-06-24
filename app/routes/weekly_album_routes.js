@@ -30,6 +30,23 @@ router.get('/weeklyalbums', (req, res, next) => {
 })
 
 // Show: GET /events/100 return a event
+router.get('/weeklyalbums/active', (req, res, next) => {
+  // get id of event from params
+  // fetching event by its id
+  WeeklyAlbums.find()
+    // handle 404 error if no event found
+    .then(handle404)
+    // respond with json of the event
+    .then(weeklyAlbums => weeklyAlbums.map(weeklyAlbums => {
+      if (weeklyAlbums.active === true) {
+        return res.json({ weeklyAlbums: weeklyAlbums })
+      }
+    }))
+    // on error continue to error handling middleware
+    .catch(next)
+})
+
+// Show: GET /events/100 return a event
 router.get('/weeklyalbums/:id', (req, res, next) => {
   // get id of event from params
   const id = req.params.id

@@ -6,7 +6,7 @@ const WeeklyVotesSchema = new mongoose.Schema({
     required: true
   },
   week: {
-    type: String
+    type: Number
   },
   album1Vote: {
     type: Number

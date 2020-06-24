@@ -28,6 +28,9 @@ const WeeklyAlbumsSchema = new mongoose.Schema({
   album3: {
     type: String,
     required: true
+  },
+  active: {
+    type: Boolean
   }
 }, {
   timestamps: true

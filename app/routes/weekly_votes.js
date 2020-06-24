@@ -34,4 +34,18 @@ router.get('/votes', (req, res, next) => {
     .catch(next)
 })
 
+// Destroy: DELETE /events/:id delete the event
+router.delete('/votes/:id', (req, res, next) => {
+  const id = req.params.id
+  WeeklyVotes.findById(id)
+    // handle 404 error if no event found
+    .then(handle404)
+    // delete event from mongodb
+    .then(weeklyVotes => weeklyVotes.deleteOne())
+    // send 204 if successful
+    .then(() => res.sendStatus(204))
+    // on error go to next middleware
+    .catch(next)
+})
+
 module.exports = router
