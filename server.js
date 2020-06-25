@@ -234,24 +234,22 @@ const processCommand = (receivedMessage) => {
   } else if (primaryCommand === 'creator') {
     const embed = new Discord.RichEmbed()
       .setTitle('Cory Vertentes')
-      .setDescription('I hope you enjoyed.')
+      // .setDescription('I hope you enjoyed.')
       .addField('Check out the code!', 'Link to my repository! [Click here](https://github.com/iamcoryv/music-voting-disordbot-api)')
-      .setColor('0xadd8e6')
+      .setColor(0xadd8e6)
       .setThumbnail('https://avatars2.githubusercontent.com/u/50142917?s=460&u=0c0be45f6f5760471b0477d565cd1593509a73d5&v=4')
-    receivedMessage.channel.send(embed)
+    receivedMessage.reply(embed)
   } else if (primaryCommand === 'help') {
     receivedMessage.reply(` All commands start with '$'
-                            arguments are broken up by "-"
-                            Commands:
-                            $albums / lists the albums to vote on this week
-                            $vote / submits votes (votes separated by "-")
-                            $standings / shows the current album vote averages
-                            $creator / tells you who made the bot
-                            `)
+  Arguments are broken up by "-"
+  Commands:
+    $albums / lists the albums to vote on this week
+    $vote / submits votes (votes separated by "-")
+    $standings / shows the current album vote averages
+    $creator / tells you who made the bot
+    `)
   } else if (primaryCommand === 'ga') {
-    receivedMessage.reply(`Thank you GA instructors for always making feel confident we can do anything. You always refered to us
-    as developers even when we struggled with for loops. Im gonna miss all of the instructors and classmates. When things 
-    clear up lets celebrate over a drink. I wish the best of luck to you all!`)
+    receivedMessage.reply(`Thank you GA instructors for always making feel confident we can do anything. You always refered to us as developers even when we struggled with for loops. Im gonna miss all of the instructors and classmates. When things clear up lets celebrate over a drink. I wish the best of luck to you all!`)
   } else {
     receivedMessage.reply("I don't understand that command. Try something else, or type $help for commands.")
   }
