@@ -237,7 +237,7 @@ const processCommand = (receivedMessage) => {
       // .setDescription('I hope you enjoyed.')
       .addField('Check out the code!', 'Link to my repository! [Click here](https://github.com/iamcoryv/music-voting-disordbot-api)')
       .setColor(0xadd8e6)
-      .setThumbnail('https://avatars2.githubusercontent.com/u/50142917?s=460&u=0c0be45f6f5760471b0477d565cd1593509a73d5&v=4')
+      // .setThumbnail('https://avatars2.githubusercontent.com/u/50142917?s=460&u=0c0be45f6f5760471b0477d565cd1593509a73d5&v=4')
     receivedMessage.reply(embed)
   } else if (primaryCommand === 'help') {
     receivedMessage.reply(` All commands start with '$'
