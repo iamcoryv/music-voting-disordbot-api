@@ -232,13 +232,14 @@ const processCommand = (receivedMessage) => {
     if (!allArguments[1]) return receivedMessage.reply('Specify how much to clear.')
     receivedMessage.channel.bulkDelete(allArguments[1])
   } else if (primaryCommand === 'creator') {
-    const embed = new Discord.RichEmbed()
-      .setTitle('Cory Vertentes')
-      // .setDescription('I hope you enjoyed.')
-      .addField('Check out the code!', 'Link to my repository! [Click here](https://github.com/iamcoryv/music-voting-disordbot-api)')
-      .setColor(0xadd8e6)
-      // .setThumbnail('https://avatars2.githubusercontent.com/u/50142917?s=460&u=0c0be45f6f5760471b0477d565cd1593509a73d5&v=4')
-    receivedMessage.reply({embed: embed})
+    // const embed = new Discord.RichEmbed()
+    //   .setTitle('Cory Vertentes')
+    //   // .setDescription('I hope you enjoyed.')
+    //   .addField('Check out the code!', 'Link to my repository! [Click here](https://github.com/iamcoryv/music-voting-disordbot-api)')
+    //   .setColor(0xadd8e6)
+    //   // .setThumbnail('https://avatars2.githubusercontent.com/u/50142917?s=460&u=0c0be45f6f5760471b0477d565cd1593509a73d5&v=4')
+    // receivedMessage.reply({embed: embed})
+    receivedMessage.reply(`Cory Vertentes Github link: https://github.com/iamcoryv/music-voting-disordbot-api`)
   } else if (primaryCommand === 'help') {
     receivedMessage.reply(` All commands start with '$'
   Arguments are broken up by "-"
