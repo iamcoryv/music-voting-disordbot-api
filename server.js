@@ -104,7 +104,7 @@ const processCommand = (receivedMessage) => {
 
   //   if (primaryCommand === 'albums') {
   //     const getAlbums = async () => {
-  //       let response = await axios.get('http://localhost:4741/weeklyalbums/active')
+  //       let response = await axios.get('https://afternoon-sea-43422.herokuapp.com/active')
   //       let albums = response.data
   //       receivedMessage.reply(`This weeks albums: \n Week ${albums.week} \n ${albums.album1} by ${albums.album1Artist}`)
   //       console.log(albums)
@@ -120,7 +120,7 @@ const processCommand = (receivedMessage) => {
   if (primaryCommand === 'albums') {
     const getAlbums = () => {
       // get the active album
-      axios.get('http://localhost:4741/weeklyalbums/active')
+      axios.get('https://afternoon-sea-43422.herokuapp.com/active')
         .then(data => {
           // reply with details about the album
           receivedMessage.reply(
@@ -136,7 +136,7 @@ const processCommand = (receivedMessage) => {
   } else if (primaryCommand === 'vote') {
     const postVote = () => {
       // get the active album
-      axios.get('http://localhost:4741/weeklyalbums/active')
+      axios.get('https://afternoon-sea-43422.herokuapp.com/active')
       // make a post request using the week key from above request
         .then(data => axios.post('http://localhost:4741/votes', {
           weeklyVotes: {
@@ -160,7 +160,7 @@ const processCommand = (receivedMessage) => {
   } else if (primaryCommand === 'standings') {
     const getStandings = () => {
       // get the active album (this weeks album)
-      axios.get('http://localhost:4741/weeklyalbums/active')
+      axios.get('https://afternoon-sea-43422.herokuapp.com/active')
         .then(data => {
           // pass the album down and get this weeks botes
           axios.get('http://localhost:4741/votes')
@@ -208,10 +208,10 @@ const processCommand = (receivedMessage) => {
     getStandings()
   } else if (receivedMessage.channel.id === '725702108250112121' && primaryCommand === 'newweek') {
     const postNewAlbums = () => {
-      axios.patch('http://localhost:4741/weeklyalbums/active')
+      axios.patch('https://afternoon-sea-43422.herokuapp.com/active')
         .then(function (album) { album.weeklyAlbums.active = false })
         .catch(console.error)
-      axios.post('http://localhost:4741/weeklyalbums', {
+      axios.post('https://afternoon-sea-43422.herokuapp.com', {
         weeklyAlbums: {
           week: parseInt(allArguments[0]),
           album1Artist: allArguments[1],
