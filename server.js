@@ -229,8 +229,8 @@ const processCommand = (receivedMessage) => {
     }
     postNewAlbums()
   } else if (primaryCommand === 'clear') {
-    if (!allArguments[1]) return receivedMessage.reply('Specify how much to clear.')
-    receivedMessage.channel.bulkDelete(allArguments[1])
+    if (!allArguments[0]) return receivedMessage.reply('Specify how much to clear.')
+    receivedMessage.channel.bulkDelete(allArguments[0])
   } else if (primaryCommand === 'creator') {
     // const embed = new Discord.RichEmbed()
     //   .setTitle('Cory Vertentes')
