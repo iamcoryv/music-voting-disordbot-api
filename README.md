@@ -1,37 +1,33 @@
 ### Music Voting Back-End API && Discord Bot
 
-This api stores weekly album choices set by an admin and votes made by users. There is also a but
+This api stores weekly album choices set by an admin and votes made by users. Along with the API there is a bot that can make requests via commands to the api. The bot is used for setting weekly ablums and accepting votes from users to be stored and a winner is found at the end of the week.
 
 ## Repositories
-Client: [Client](https://github.com/The-Da-Vinci-Coders/E-Commerce-Client)
-API: [API](https://github.com/The-Da-Vinci-Coders/E-Commerce-API)
+Client: [Client](https://github.com/iamcoryv/music-voting-admin-client)
+API: [API](https://github.com/iamcoryv/music-voting-disordbot-api)
 
 
 ## Deployed Sites
-Client: [Client](https://the-da-vinci-coders.github.io/E-Commerce-Client/)
-API: [API](https://warm-beyond-78319.herokuapp.com/)
+Client: [Client](https://iamcoryv.github.io/music-voting-admin-client/)
+API: [API](https://afternoon-sea-43422.herokuapp.com/)
 
 
 ## List of technologies used
-HTML, CSS, MongoDB, Mongoose, Express, React, Node, Stripe, Lodash, Axios, Bootstrap
+HTML, CSS, MongoDB, Mongoose, Express, React, Node, Axios, Bootstrap, discord.js, discord
 
 
 ## List unsolved problems which would be fixed in future iterations.
 
-### Interactivity Component
-In a version two it would be great to add more interactivity to the application. This could be accomplished through a chat feature where a user could interact with a bot to help guide their trip in the right direction, or to communicate directly with a seller.
-
-### Expanded details
-Additionally, it would be great to expand the product page to include more details on each item. Further, with an expanded set of products there’s great potential to track and add inventory to the page allowing new users to be both buyers and sellers.
-
-### Search by category
-We'd like to have implemented a search by category, where a user could select a category and only have products of that category appear as well.
+#### Bot reply styling
+I want to play around with discord embeds to make the styling of but replies a bit cleaner and more visually appealing.
+#### Bot Commands
+I want to add additional commands and a patch route for editing votes if someone changes their mind.
 
 ## Document your planning, process and problem-solving strategy
-After solidifying our idea for a project, our development team discussed our individual visions for the app and features that were important to include in an E-Commerce site. After setting up both repos, we began looking at user functionality for a new customer and setting up corresponding routes on our database. Our group's first notable issue emerged when dealing with nested routes, when defining the path from the shopping cart to checkout. This was a learning experience highlighting the complexities of nested routes. Another notably complex issue emerged when attempting to set up purchase history as an array, eventually though debugging we updated our code to include a .map method instead of a .forEach to correctly display the data. Generally our group worked together to develop and debug code, which proved to be an efficient workflow. As a group we communicated efficiently and periodically recalibrated our ways of attacking problems as our working relationship progressed. Collectively our group did well in defining our goals and adapting over the course of the project to ensure that we put forward our best effort.
+I was talking to a friend about how I was building an API and client for a final project and after I
+explained how it worked he mentioned how that would useful for the discord music channel we are a part of. I layed out the models and what routes would be needed and went from there. It was a learning process as the project went on, I took what I knew about making server requests and my knowledge of JavaScript and applied it to what I learned from the Discord Docs.
 
 ## API Routes
-
 
 ### User
 
